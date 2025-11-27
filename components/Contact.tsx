@@ -71,7 +71,7 @@ export default function Contact() {
     { icon: 'FaInstagram', label: 'Instagram', url: 'https://www.instagram.com/khaledsameh37', color: 'hover:bg-pink-500' },
     { icon: 'FaLinkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/in/khaled-sameh-16a3bb257', color: 'hover:bg-blue-600' },
     { icon: 'FaYoutube', label: 'YouTube', url: 'https://www.youtube.com/@khaledsameh1939', color: 'hover:bg-red-600' },
-    { icon: 'FaTwitter', label: 'Twitter', url: 'https://twitter.com/ksameh764', color: 'hover:bg-blue-400' }
+    { icon: 'FaTwitter', label: 'Twitter', url: 'https://www.instagram.com/khaledsameh37', color: 'hover:bg-blue-400' }
   ]
 
   const contactInfo = [

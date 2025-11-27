@@ -155,16 +155,13 @@ export default function Videos() {
                         {video.description}
                       </p>
 
-                      <div className="flex items-center justify-between pt-4 border-t border-coffee-light/50">
-                        <div className="flex items-center gap-6 text-coffee-medium">
+                      <div className="flex items-center justify-items-start pt-4 border-t border-coffee-light/50">
+                        <div className="flex items-center  text-coffee-medium">
                           <div className="flex items-center gap-2">
                             <FaEye className="text-coffee-brown" />
-                            <span className="text-sm font-medium">Watch Now</span>
+                            <span className="text-sm font-medium  whitespace-nowrap">Watch Now</span>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <FaClock className="text-coffee-brown" />
-                            <span className="text-sm font-medium">Available</span>
-                          </div>
+                         
                         </div>
 
                         <motion.button
@@ -213,7 +210,7 @@ export default function Videos() {
               target="_blank"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn btn-lg bg-coffee-brown hover:bg-coffee-dark text-white border-none shadow-xl text-xl px-10"
+              className="btn btn-lg bg-coffee-brown hover:bg-coffee-dark text-white border-none shadow-xl text-xl px-3"
             >
               <FaYoutube className="text-2xl mr-2" />
               Subscribe on YouTube
