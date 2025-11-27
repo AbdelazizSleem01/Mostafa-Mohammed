@@ -17,7 +17,7 @@ export default function Gallery() {
   const [isLoading, setIsLoading] = useState(true)
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [direction, setDirection] = useState(0) 
+  const [direction, setDirection] = useState(0)
   const [carouselView, setCarouselView] = useState(false)
 
   useEffect(() => {
@@ -66,7 +66,7 @@ export default function Gallery() {
 
   useEffect(() => {
     if (!carouselView || gallery.length <= 1) return
-    
+
     const interval = setInterval(() => {
       setDirection(0)
       setCurrentIndex(prev => (prev + 1) % gallery.length)
@@ -239,22 +239,20 @@ export default function Gallery() {
               <div className="bg-coffee-light rounded-2xl p-2 flex gap-2">
                 <button
                   onClick={() => setCarouselView(false)}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    !carouselView
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${!carouselView
                       ? 'bg-coffee-brown text-white shadow-lg'
                       : 'text-coffee-dark hover:bg-white/50'
-                  }`}
+                    }`}
                 >
                   <FaIcons.FaTh className="inline mr-2" />
                   Grid View
                 </button>
                 <button
                   onClick={() => setCarouselView(true)}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    carouselView
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${carouselView
                       ? 'bg-coffee-brown text-white shadow-lg'
                       : 'text-coffee-dark hover:bg-white/50'
-                  }`}
+                    }`}
                 >
                   <FaIcons.FaPlay className="inline mr-2" />
                   Carousel View
@@ -294,7 +292,7 @@ export default function Gallery() {
                         priority
                         loading="eager"
                       />
-                      
+
                       {/* Overlay Info */}
                       <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6 rounded-b-2xl">
                         <h3 className="text-white text-2xl lg:text-3xl font-bold mb-2">
@@ -348,11 +346,10 @@ export default function Gallery() {
                         setDirection(index > currentIndex ? 0 : 1)
                         setCurrentIndex(index)
                       }}
-                      className={`shrink-0 relative w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                        index === currentIndex
+                      className={`shrink-0 relative w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${index === currentIndex
                           ? 'border-coffee-brown scale-110 shadow-lg'
                           : 'border-coffee-light hover:border-coffee-medium'
-                      }`}
+                        }`}
                     >
                       <Image
                         src={item.imageUrl}
@@ -481,7 +478,7 @@ export default function Gallery() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn btn-primary bg-coffee-brown border-coffee-brown hover:bg-coffee-dark text-white px-8 py-3 text-lg"
+              className="btn btn-primary bg-coffee-brown border-coffee-brown hover:bg-coffee-dark text-white px-3 py-3 text-lg"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <FaIcons.FaCamera className="mr-2" />

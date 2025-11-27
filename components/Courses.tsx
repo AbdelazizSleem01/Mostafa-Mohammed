@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  FaGraduationCap, 
-  FaClock, 
-  FaUsers, 
+import {
+  FaGraduationCap,
+  FaClock,
+  FaUsers,
   FaStar,
   FaArrowRight,
   FaCoffee,
@@ -122,13 +122,13 @@ export default function Courses() {
           >
             <FaGraduationCap className="text-white text-2xl" />
           </motion.div>
-          
+
           <h2 className="text-5xl lg:text-6xl font-bold text-coffee-dark mb-6">
             Professional <span className="text-coffee-brown">Courses</span>
           </h2>
-          
+
           <p className="text-xl text-coffee-medium max-w-2xl mx-auto leading-relaxed">
-            Master the art of coffee through comprehensive courses designed for 
+            Master the art of coffee through comprehensive courses designed for
             both beginners and experienced baristas.
           </p>
         </motion.div>
@@ -159,7 +159,7 @@ export default function Courses() {
                     >
                       {/* تأثير خلفية عند hover */}
                       <div className="absolute inset-0 bg-linear-to-br from-coffee-brown to-amber-700 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-                      
+
                       <div className="card-body p-8 relative z-10">
                         {/* أيقونة الكورس */}
                         <motion.div
@@ -238,7 +238,7 @@ export default function Courses() {
               <div className="text-6xl mb-4">📚</div>
               <h3 className="text-2xl text-coffee-dark mb-4">Courses Coming Soon</h3>
               <p className="text-coffee-medium text-lg max-w-md mx-auto">
-                Exciting coffee courses are in development. 
+                Exciting coffee courses are in development.
                 Check back soon to elevate your barista skills!
               </p>
             </motion.div>
@@ -263,7 +263,7 @@ export default function Courses() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn btn-primary bg-coffee-brown border-coffee-brown hover:bg-coffee-dark text-white px-8 py-3 text-lg"
+              className="btn btn-primary bg-coffee-brown border-coffee-brown hover:bg-coffee-dark text-white px-3 py-3 text-lg"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Enroll Now

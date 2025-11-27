@@ -239,7 +239,7 @@ export default function Skills() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn btn-primary bg-coffee-brown border-coffee-brown hover:bg-coffee-dark text-white px-8 py-3 text-lg"
+              className="btn btn-primary bg-coffee-brown border-coffee-brown hover:bg-coffee-dark text-white px-3 py-3 text-lg"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Let's Work Together

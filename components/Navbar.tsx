@@ -2,15 +2,15 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  FaHome, 
-  FaUser, 
-  FaGraduationCap, 
-  FaTrophy, 
-  FaVideo, 
-  FaImages, 
-  FaCertificate, 
-  FaBriefcase, 
+import {
+  FaHome,
+  FaUser,
+  FaGraduationCap,
+  FaTrophy,
+  FaVideo,
+  FaImages,
+  FaCertificate,
+  FaBriefcase,
   FaEnvelope,
   FaBars,
   FaTimes,
@@ -31,7 +31,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
-      
+
       // تحديث القسم النشط
       const sections = ['home', 'skills', 'courses', 'achievements', 'videos', 'gallery', 'certificates', 'career', 'contact']
       const currentSection = sections.find(section => {
@@ -42,7 +42,7 @@ export default function Navbar() {
         }
         return false
       })
-      
+
       if (currentSection) {
         setActiveSection(currentSection)
       }
@@ -68,21 +68,21 @@ export default function Navbar() {
   const secondaryItems = navItems.filter(item => !item.priority)
 
   const socialLinks = [
-    { 
-      icon: FaInstagram, 
-      href: "https://www.instagram.com/khaledsameh37", 
+    {
+      icon: FaInstagram,
+      href: "https://www.instagram.com/khaledsameh37",
       color: "hover:bg-pink-500 hover:text-white",
       label: "Instagram"
     },
-    { 
-      icon: FaLinkedin, 
-      href: "https://www.linkedin.com/in/khaled-sameh-16a3bb257", 
+    {
+      icon: FaLinkedin,
+      href: "https://www.linkedin.com/in/khaled-sameh-16a3bb257",
       color: "hover:bg-blue-600 hover:text-white",
       label: "LinkedIn"
     },
-    { 
-      icon: FaYoutube, 
-      href: "https://www.youtube.com/@khaledsameh1939", 
+    {
+      icon: FaYoutube,
+      href: "https://www.youtube.com/@khaledsameh1939",
       color: "hover:bg-red-600 hover:text-white",
       label: "YouTube"
     },
@@ -103,13 +103,12 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled 
-            ? 'bg-white/95 backdrop-blur-lg shadow-2xl shadow-coffee-brown/20 py-2 border-b border-coffee-light/30' 
-            : 'bg-transparent py-3'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+          ? 'bg-white/95 backdrop-blur-lg shadow-2xl shadow-coffee-brown/20 py-2 border-b border-coffee-light/30'
+          : 'bg-transparent py-3'
+          }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-3">
           <div className="flex justify-between items-center h-14 lg:h-16">
             {/* Logo */}
             <motion.div
@@ -120,7 +119,7 @@ export default function Navbar() {
             >
               <div className="relative">
                 <div className="w-16 h-16 lg:w-16 lg:h-16 bg-linear-to-br from-coffee-brown to-amber-700 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Image 
+                  <Image
                     src="/logo.png"
                     alt="Khaled Coffee Master Logo"
                     width={50}
@@ -135,14 +134,14 @@ export default function Navbar() {
                 />
               </div>
               <div className="hidden sm:block">
-                <motion.h1 
+                <motion.h1
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   className="text-xl lg:text-2xl font-bold bg-linear-to-r from-coffee-dark to-coffee-brown bg-clip-text text-transparent"
                 >
                   Khaled
                 </motion.h1>
-                <motion.p 
+                <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.1 }}
@@ -159,22 +158,20 @@ export default function Navbar() {
                 <motion.button
                   key={item.name}
                   onClick={() => scrollToSection(item.href, item.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 group relative shrink-0 ${
-                    activeSection === item.id
-                      ? 'text-coffee-brown bg-coffee-light/50 shadow-inner'
-                      : 'text-coffee-dark hover:text-coffee-brown hover:bg-coffee-light/30'
-                  }`}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 group relative shrink-0 ${activeSection === item.id
+                    ? 'text-coffee-brown bg-coffee-light/50 shadow-inner'
+                    : 'text-coffee-dark hover:text-coffee-brown hover:bg-coffee-light/30'
+                    }`}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <item.icon className={`text-lg transition-colors ${
-                    activeSection === item.id ? 'text-coffee-brown' : 'text-coffee-medium group-hover:text-coffee-brown'
-                  }`} />
+                  <item.icon className={`text-lg transition-colors ${activeSection === item.id ? 'text-coffee-brown' : 'text-coffee-medium group-hover:text-coffee-brown'
+                    }`} />
                   <span className="font-semibold whitespace-nowrap">{item.name}</span>
-                  
+
                   {activeSection === item.id && (
                     <motion.div
                       className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-coffee-brown rounded-full"
@@ -190,11 +187,10 @@ export default function Navbar() {
                 <div className="relative">
                   <motion.button
                     onClick={() => setShowMoreMenu(!showMoreMenu)}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 group relative ${
-                      showMoreMenu
-                        ? 'text-coffee-brown bg-coffee-light/50 shadow-inner'
-                        : 'text-coffee-dark hover:text-coffee-brown hover:bg-coffee-light/30'
-                    }`}
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 group relative ${showMoreMenu
+                      ? 'text-coffee-brown bg-coffee-light/50 shadow-inner'
+                      : 'text-coffee-dark hover:text-coffee-brown hover:bg-coffee-light/30'
+                      }`}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -214,19 +210,17 @@ export default function Navbar() {
                           <motion.button
                             key={item.name}
                             onClick={() => scrollToSection(item.href, item.id)}
-                            className={`flex items-center space-x-3 w-full px-4 py-3 transition-all duration-200 group ${
-                              activeSection === item.id
-                                ? 'text-coffee-brown bg-coffee-light/30'
-                                : 'text-coffee-dark hover:text-coffee-brown hover:bg-coffee-light/20'
-                            }`}
+                            className={`flex items-center space-x-3 w-full px-4 py-3 transition-all duration-200 group ${activeSection === item.id
+                              ? 'text-coffee-brown bg-coffee-light/30'
+                              : 'text-coffee-dark hover:text-coffee-brown hover:bg-coffee-light/20'
+                              }`}
                             whileHover={{ x: 5 }}
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.05 }}
                           >
-                            <item.icon className={`text-lg transition-colors ${
-                              activeSection === item.id ? 'text-coffee-brown' : 'text-coffee-medium group-hover:text-coffee-brown'
-                            }`} />
+                            <item.icon className={`text-lg transition-colors ${activeSection === item.id ? 'text-coffee-brown' : 'text-coffee-medium group-hover:text-coffee-brown'
+                              }`} />
                             <span className="font-medium whitespace-nowrap">{item.name}</span>
                           </motion.button>
                         ))}
@@ -292,7 +286,7 @@ export default function Navbar() {
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setIsOpen(false)}
             />
-            
+
             {/* Menu Panel */}
             <motion.div
               initial={{ x: '100%' }}
@@ -305,15 +299,21 @@ export default function Navbar() {
               <div className="p-6 border-b border-coffee-light/30 bg-white/80 backdrop-blur-sm">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-3">
-                    <div className="w-14 h-14 bg-linear-to-br from-coffee-brown to-amber-700 rounded-2xl flex items-center justify-center shadow-lg">
-                      <Image 
+                    <div className="w-16 h-16 lg:w-16 lg:h-16 bg-linear-to-br from-coffee-brown to-amber-700 rounded-2xl flex items-center justify-center shadow-lg">
+                      <Image
                         src="/logo.png"
                         alt="Khaled Coffee Master Logo"
-                        width={28}
-                        height={28}
-                        className="object-contain filter brightness-0 invert"
+                        width={50}
+                        height={50}
+                        className="object-contain rounded-md"
                       />
                     </div>
+                    <motion.div
+                      className="absolute inset-0 border-2 border-coffee-brown/30 rounded-2xl"
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    />
+
                     <div>
                       <h2 className="text-xl font-bold bg-linear-to-r from-coffee-dark to-coffee-brown bg-clip-text text-transparent">
                         Khaled
@@ -359,21 +359,19 @@ export default function Navbar() {
                   <motion.button
                     key={item.name}
                     onClick={() => scrollToSection(item.href, item.id)}
-                    className={`flex items-center space-x-4 w-full p-4 rounded-2xl transition-all duration-300 group mb-3 ${
-                      activeSection === item.id
-                        ? 'bg-coffee-light/50 text-coffee-brown shadow-inner'
-                        : 'text-coffee-dark hover:bg-coffee-light/30 hover:text-coffee-brown'
-                    }`}
+                    className={`flex items-center space-x-4 w-full p-4 rounded-2xl transition-all duration-300 group mb-3 ${activeSection === item.id
+                      ? 'bg-coffee-light/50 text-coffee-brown shadow-inner'
+                      : 'text-coffee-dark hover:bg-coffee-light/30 hover:text-coffee-brown'
+                      }`}
                     whileHover={{ x: 5 }}
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
                   >
-                    <item.icon className={`text-xl transition-colors ${
-                      activeSection === item.id ? 'text-coffee-brown' : 'text-coffee-medium group-hover:text-coffee-brown'
-                    }`} />
+                    <item.icon className={`text-xl transition-colors ${activeSection === item.id ? 'text-coffee-brown' : 'text-coffee-medium group-hover:text-coffee-brown'
+                      }`} />
                     <span className="font-semibold text-lg">{item.name}</span>
-                    
+
                     {activeSection === item.id && (
                       <motion.div
                         className="ml-auto w-2 h-2 bg-coffee-brown rounded-full"

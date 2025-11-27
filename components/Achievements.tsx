@@ -229,7 +229,7 @@ export default function Achievements() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn bg-amber-500 border-amber-500 hover:bg-amber-600 hover:border-amber-600 text-white px-8 py-3 text-lg font-semibold"
+              className="btn bg-amber-500 border-amber-500 hover:bg-amber-600 hover:border-amber-600 text-white px-3 py-3 text-lg font-semibold"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <FaIcons.FaStar className="mr-2" />

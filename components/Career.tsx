@@ -28,7 +28,7 @@ export default function Career() {
       if (response.ok) {
         const data = await response.json()
         // Sort by start date (newest first)
-        const sortedData = data.sort((a: CareerItem, b: CareerItem) => 
+        const sortedData = data.sort((a: CareerItem, b: CareerItem) =>
           new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
         )
         setCareer(sortedData)
@@ -50,22 +50,22 @@ export default function Career() {
   const calculateDuration = (startDate: string, endDate?: string, isCurrent?: boolean) => {
     const start = new Date(startDate)
     const end = isCurrent ? new Date() : new Date(endDate || '')
-    
+
     const years = end.getFullYear() - start.getFullYear()
     const months = end.getMonth() - start.getMonth()
-    
+
     let totalMonths = years * 12 + months
     if (totalMonths < 0) totalMonths = 0
-    
+
     const yearsPart = Math.floor(totalMonths / 12)
     const monthsPart = totalMonths % 12
-    
+
     if (yearsPart === 0 && monthsPart === 0) return 'Less than 1 month'
-    
+
     const parts = []
     if (yearsPart > 0) parts.push(`${yearsPart} yr${yearsPart > 1 ? 's' : ''}`)
     if (monthsPart > 0) parts.push(`${monthsPart} mo${monthsPart > 1 ? 's' : ''}`)
-    
+
     return parts.join(' ')
   }
 
@@ -137,7 +137,7 @@ export default function Career() {
           </h2>
 
           <p className="text-xl text-coffee-medium max-w-2xl mx-auto leading-relaxed">
-            My journey through the coffee industry, from passionate beginnings to professional expertise. 
+            My journey through the coffee industry, from passionate beginnings to professional expertise.
             Each role has shaped my skills and deepened my love for the craft.
           </p>
         </motion.div>
@@ -159,28 +159,25 @@ export default function Career() {
                 <motion.div
                   key={item._id}
                   variants={itemVariants}
-                  className={`flex flex-col lg:flex-row items-start gap-8 mb-12 last:mb-0 ${
-                    index % 2 === 0 ? 'lg:flex-row-reverse' : ''
-                  }`}
+                  className={`flex flex-col lg:flex-row items-start gap-8 mb-12 last:mb-0 ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''
+                    }`}
                 >
                   {/* Timeline Dot */}
                   <div className="flex items-center justify-center lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 relative z-10">
                     <motion.div
                       whileHover={{ scale: 1.2 }}
-                      className={`w-6 h-6 rounded-full border-4 border-white shadow-lg ${
-                        item.isCurrent 
-                          ? 'bg-green-500 ring-4 ring-green-200 animate-pulse' 
+                      className={`w-6 h-6 rounded-full border-4 border-white shadow-lg ${item.isCurrent
+                          ? 'bg-green-500 ring-4 ring-green-200 animate-pulse'
                           : 'bg-coffee-brown'
-                      }`}
+                        }`}
                     />
                   </div>
 
                   {/* Content Card */}
                   <motion.div
                     whileHover={{ y: -5, scale: 1.02 }}
-                    className={`card bg-white/80 backdrop-blur-sm border-2 border-coffee-light shadow-coffee hover:shadow-coffee-lg transition-all duration-300 flex-1 ${
-                      index % 2 === 0 ? 'lg:mr-8' : 'lg:ml-8'
-                    }`}
+                    className={`card bg-white/80 backdrop-blur-sm border-2 border-coffee-light shadow-coffee hover:shadow-coffee-lg transition-all duration-300 flex-1 ${index % 2 === 0 ? 'lg:mr-8' : 'lg:ml-8'
+                      }`}
                   >
                     <div className="card-body p-6 lg:p-8">
                       {/* Header */}
@@ -204,7 +201,7 @@ export default function Career() {
                             {item.workplace}
                           </motion.p>
                         </div>
-                        
+
                         {/* Status Badge */}
                         <motion.div
                           initial={{ opacity: 0, scale: 0.8 }}
@@ -212,11 +209,10 @@ export default function Career() {
                           transition={{ delay: 0.4 }}
                           className="shrink-0"
                         >
-                          <span className={`badge badge-lg ${
-                            item.isCurrent 
-                              ? 'bg-green-100 text-green-800 border-green-200' 
+                          <span className={`badge badge-lg ${item.isCurrent
+                              ? 'bg-green-100 text-green-800 border-green-200'
                               : 'bg-coffee-light text-coffee-dark border-coffee-medium'
-                          } border font-semibold`}>
+                            } border font-semibold`}>
                             {item.isCurrent ? (
                               <>
                                 <FaIcons.FaPlayCircle className="mr-2" />
@@ -284,13 +280,12 @@ export default function Career() {
                         className="mt-6"
                       >
                         <div className="w-full bg-coffee-light rounded-full h-2">
-                          <div 
-                            className={`h-2 rounded-full ${
-                              item.isCurrent 
-                                ? 'bg-linear-to-r from-green-500 to-green-600' 
+                          <div
+                            className={`h-2 rounded-full ${item.isCurrent
+                                ? 'bg-linear-to-r from-green-500 to-green-600'
                                 : 'bg-linear-to-r from-coffee-brown to-amber-700'
-                            } transition-all duration-1000`}
-                            style={{ 
+                              } transition-all duration-1000`}
+                            style={{
                               width: item.isCurrent ? '85%' : '100%',
                               animation: item.isCurrent ? 'pulse 2s infinite' : 'none'
                             }}
@@ -331,13 +326,13 @@ export default function Career() {
               Ready for the Next Chapter?
             </h3>
             <p className="text-coffee-medium mb-6">
-              With years of dedicated experience in the coffee industry, I'm always excited 
+              With years of dedicated experience in the coffee industry, I'm always excited
               to take on new challenges and contribute to exceptional coffee experiences.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn btn-primary bg-coffee-brown border-coffee-brown hover:bg-coffee-dark text-white px-8 py-3 text-lg"
+              className="btn btn-primary bg-coffee-brown border-coffee-brown hover:bg-coffee-dark text-white px-3 py-3 text-lg"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <FaIcons.FaHandshake className="mr-2" />
