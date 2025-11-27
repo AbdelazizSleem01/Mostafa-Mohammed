@@ -1,0 +1,318 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 250, 243, 228;
+  --background-end-rgb: 253, 248, 238;
+  --coffee-light: 250, 243, 228;
+  --coffee-medium: 210, 180, 140;
+  --coffee-dark: 111, 78, 55;
+  --coffee-brown: 139, 69, 19;
+  --amber-light: 254, 252, 240;
+  --btn-primary: #8b4513;
+}
+.btn-primary {
+  background-color: var(--btn-primary);
+  border-color: #8b4513;
+  color: #faf3e4;
+  box-shadow: 0 20px 40px -15px rgba(111, 78, 55, 0.4);
+}
+.btn-primary:hover {
+  background-color: #8b4513;
+  border-color: #8b4513;
+  color: #faf3e4;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    135deg,
+    rgb(var(--background-start-rgb)) 0%,
+    rgb(var(--amber-light)) 50%,
+    rgb(var(--background-end-rgb)) 100%
+  );
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+@theme {
+  --color-coffee-light: rgb(var(--coffee-light));
+  --color-coffee-medium: rgb(var(--coffee-medium));
+  --color-coffee-dark: rgb(var(--coffee-dark));
+  --color-coffee-brown: rgb(var(--coffee-brown));
+}
+
+:root {
+  --p: 111 78 55;
+  --pc: 250 243 228;
+
+  --s: 210 180 140;
+  --sc: 30 15 5;
+
+  --a: 139 69 19;
+  --ac: 250 243 228;
+
+  --n: 250 243 228;
+  --primary: #6f4e37;
+  --nc: 111 78 55;
+
+  --b1: 250 243 228;
+  --b2: 245 235 215;
+  --b3: 240 225 200;
+
+  --bc: 111 78 55;
+}
+
+.coffee-steam {
+  animation: steam 4s ease-out infinite;
+}
+
+@keyframes steam {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(2);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-5deg);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-reverse {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-coffee-brown) 0%,
+    var(--color-coffee-dark) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-coffee {
+  box-shadow: 0 10px 30px -10px rgba(111, 78, 55, 0.3);
+}
+
+.shadow-coffee-lg {
+  box-shadow: 0 20px 40px -15px rgba(111, 78, 55, 0.4);
+}
+
+.border-coffee {
+  border-color: rgb(var(--coffee-medium));
+}
+
+.border-coffee-dark {
+  border-color: rgb(var(--coffee-dark));
+}
+
+.bg-coffee-gradient {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--coffee-light)) 0%,
+    rgb(var(--amber-light)) 100%
+  );
+}
+
+.bg-coffee-dark-gradient {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--coffee-dark)) 0%,
+    rgb(var(--coffee-brown)) 100%
+  );
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -15px rgba(111, 78, 55, 0.4);
+}
+
+.btn-coffee {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--coffee-dark)) 0%,
+    rgb(var(--coffee-brown)) 100%
+  );
+  border: none;
+  color: rgb(var(--coffee-light));
+  transition: all 0.3s ease;
+}
+
+.btn-coffee:hover {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--coffee-brown)) 0%,
+    rgb(var(--coffee-dark)) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(111, 78, 55, 0.4);
+}
+
+.btn-coffee-outline {
+  background: transparent;
+  border: 2px solid rgb(var(--coffee-dark));
+  color: rgb(var(--coffee-dark));
+  transition: all 0.3s ease;
+}
+
+.btn-coffee-outline:hover {
+  background: rgb(var(--coffee-dark));
+  color: rgb(var(--coffee-light));
+  transform: translateY(-2px);
+}
+
+.card-coffee {
+  background: rgb(var(--coffee-light));
+  border: 1px solid rgba(111, 78, 55, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-coffee:hover {
+  border-color: rgb(var(--coffee-medium));
+  box-shadow: 0 15px 30px -10px rgba(111, 78, 55, 0.2);
+}
+
+.input-coffee {
+  border: 2px solid rgb(var(--coffee-medium));
+  background: rgb(var(--amber-light));
+  transition: all 0.3s ease;
+}
+
+.input-coffee:focus {
+  border-color: rgb(var(--coffee-dark));
+  box-shadow: 0 0 0 3px rgba(111, 78, 55, 0.1);
+}
+
+.loading-coffee {
+  color: rgb(var(--coffee-dark));
+}
+
+.alert-coffee {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--coffee-light)) 0%,
+    rgb(var(--amber-light)) 100%
+  );
+  border: 1px solid rgb(var(--coffee-medium));
+  color: rgb(var(--coffee-dark));
+}
+
+.menu-coffee li > *:not(ul):not(.menu-title):not(details):active,
+.menu-coffee li > *:not(ul):not(.menu-title):not(details).active,
+.menu-coffee li > details > summary:active {
+  background-color: rgb(var(--coffee-dark));
+  color: rgb(var(--coffee-light));
+}
+
+.section-light {
+  background: rgb(var(--coffee-light));
+}
+
+.section-medium {
+  background: rgb(var(--amber-light));
+}
+
+.section-dark {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--coffee-dark)) 0%,
+    rgb(var(--coffee-brown)) 100%
+  );
+  color: rgb(var(--coffee-light));
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mobile-text-center {
+    text-align: center;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      rgb(var(--coffee-medium)) 0%,
+      rgb(var(--coffee-light)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-coffee {
+    background: rgb(var(--coffee-light));
+    border: 1px solid rgba(200, 170, 140, 0.2);
+  }
+
+  .input-coffee {
+    background: rgb(var(--coffee-light));
+    border-color: rgb(var(--coffee-medium));
+    color: rgb(var(--coffee-dark));
+  }
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
