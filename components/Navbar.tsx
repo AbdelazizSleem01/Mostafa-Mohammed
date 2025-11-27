@@ -300,13 +300,16 @@ export default function Navbar() {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-3">
                     <div className="w-16 h-16 lg:w-16 lg:h-16 bg-linear-to-br from-coffee-brown to-amber-700 rounded-2xl flex items-center justify-center shadow-lg">
-                      <Image
-                        src="/logo.png"
-                        alt="Khaled Coffee Master Logo"
-                        width={50}
-                        height={50}
-                        className="object-contain rounded-md"
-                      />
+                      <div className='relative'>
+
+                        <Image
+                          src="/logo.png"
+                          alt="Khaled Coffee Master Logo"
+                          width={50}
+                          height={50}
+                          className="object-contain rounded-md"
+                        />
+                      </div>
                     </div>
                     <motion.div
                       className="absolute inset-0 border-2 border-coffee-brown/30 rounded-2xl"
@@ -385,7 +388,7 @@ export default function Navbar() {
               </div>
 
               {/* Footer */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-coffee-light/30 bg-white/80 backdrop-blur-sm">
+              {/* <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-coffee-light/30 bg-white/80 backdrop-blur-sm">
                 <div className="text-center">
                   <p className="text-coffee-medium text-sm font-medium mb-2">
                     Let's brew something amazing together!
@@ -398,7 +401,7 @@ export default function Navbar() {
                     ☕
                   </motion.div>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </>
         )}
