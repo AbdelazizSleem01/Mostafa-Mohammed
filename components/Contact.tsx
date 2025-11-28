@@ -68,15 +68,15 @@ export default function Contact() {
   }
 
   const socialLinks = [
-    { icon: 'FaInstagram', label: 'Instagram', url: 'https://www.instagram.com/khaledsameh37', color: 'hover:bg-pink-500' },
-    { icon: 'FaLinkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/in/khaled-sameh-16a3bb257', color: 'hover:bg-blue-600' },
-    { icon: 'FaYoutube', label: 'YouTube', url: 'https://www.youtube.com/@khaledsameh1939', color: 'hover:bg-red-600' },
-    { icon: 'FaTwitter', label: 'Twitter', url: 'https://www.instagram.com/khaledsameh37', color: 'hover:bg-blue-400' }
+    { icon: 'FaInstagram', label: 'Instagram', url: 'https://www.instagram.com/mostafamohmed36/', color: 'hover:bg-pink-500' },
+    { icon: 'FaLinkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/in/mostafa-desha-920956392/', color: 'hover:bg-blue-600' },
+    { icon: 'FaYoutube', label: 'YouTube', url: 'https://www.youtube.com/@mostafadesha-h6n', color: 'hover:bg-red-600' },
+    { icon: 'FaTwitter', label: 'Twitter', url: 'https://www.instagram.com/mostafamohmed36/', color: 'hover:bg-blue-400' }
   ]
 
   const contactInfo = [
-    { icon: 'FaEnvelope', label: 'Email', value: 'ksameh764@gmail.com', url: 'mailto:ksameh764@gmail.com' },
-    { icon: 'FaPhone', label: 'Phone', value: '+201024529364', url: 'tel:+201024529364' },
+    { icon: 'FaEnvelope', label: 'Email', value: 'md7295632@gmail.com', url: 'mailto:md7295632@gmail.com' },
+    { icon: 'FaPhone', label: 'Phone', value: '+201030266707', url: 'tel:+201030266707' },
     { icon: 'FaMapMarkerAlt', label: 'Location', value: 'Benha, Qalyubia, Egypt', url: '#' }
   ]
 
@@ -87,7 +87,7 @@ export default function Contact() {
         <div className="absolute top-1/4 right-20 text-4xl">💬</div>
         <div className="absolute bottom-20 left-20 text-5xl">✨</div>
         <div className="absolute bottom-10 right-10 text-6xl">🌟</div>
-        
+
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-amber-500/30"></div>
           <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-amber-500/30"></div>
@@ -116,7 +116,7 @@ export default function Contact() {
           </h2>
 
           <p className="text-xl text-amber-100 max-w-2xl mx-auto leading-relaxed">
-            Ready to brew something amazing together? Whether you're looking for collaboration, 
+            Ready to brew something amazing together? Whether you're looking for collaboration,
             consultation, or just want to talk coffee, I'd love to hear from you.
           </p>
         </motion.div>
@@ -196,7 +196,7 @@ export default function Contact() {
                 <h4 className="text-white font-bold text-lg">Quick Response</h4>
               </div>
               <p className="text-amber-100 text-sm">
-                I typically respond to all messages within 24 hours. For urgent matters, 
+                I typically respond to all messages within 24 hours. For urgent matters,
                 feel free to call or connect on social media.
               </p>
             </motion.div>

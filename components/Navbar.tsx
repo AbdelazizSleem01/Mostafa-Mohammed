@@ -70,19 +70,19 @@ export default function Navbar() {
   const socialLinks = [
     {
       icon: FaInstagram,
-      href: "https://www.instagram.com/khaledsameh37",
+      href: "https://www.instagram.com/mostafamohmed36/",
       color: "hover:bg-pink-500 hover:text-white",
       label: "Instagram"
     },
     {
       icon: FaLinkedin,
-      href: "https://www.linkedin.com/in/khaled-sameh-16a3bb257",
+      href: "https://www.linkedin.com/in/mostafa-desha-920956392/",
       color: "hover:bg-blue-600 hover:text-white",
       label: "LinkedIn"
     },
     {
       icon: FaYoutube,
-      href: "https://www.youtube.com/@khaledsameh1939",
+      href: "https://www.youtube.com/@mostafadesha-h6n",
       color: "hover:bg-red-600 hover:text-white",
       label: "YouTube"
     },
@@ -118,12 +118,12 @@ export default function Navbar() {
               onClick={() => scrollToSection('#home', 'home')}
             >
               <div className="relative">
-                <div className="w-16 h-16 lg:w-16 lg:h-16 bg-linear-to-br from-coffee-brown to-amber-700 rounded-2xl flex items-center justify-center shadow-lg">
+                <div className="w-16 h-14 lg:w-16 lg:h-14 bg-linear-to-br from-coffee-brown to-amber-700 rounded-2xl flex items-center justify-center shadow-lg">
                   <Image
-                    src="/logo.png"
-                    alt="Khaled Coffee Master Logo"
-                    width={50}
-                    height={50}
+                    src="/logo1.png"
+                    alt="MostafaCoffee Master Logo"
+                    width={55}
+                    height={75}
                     className="object-contain rounded-md"
                   />
                 </div>
@@ -139,7 +139,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   className="text-xl lg:text-2xl font-bold bg-linear-to-r from-coffee-dark to-coffee-brown bg-clip-text text-transparent"
                 >
-                  Khaled
+                  Mostafa
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -303,8 +303,8 @@ export default function Navbar() {
                       <div className='relative'>
 
                         <Image
-                          src="/logo.png"
-                          alt="Khaled Coffee Master Logo"
+                          src="/logo1.png"
+                          alt="MostafaCoffee Master Logo"
                           width={50}
                           height={50}
                           className="object-contain rounded-md"
@@ -319,7 +319,7 @@ export default function Navbar() {
 
                     <div>
                       <h2 className="text-xl font-bold bg-linear-to-r from-coffee-dark to-coffee-brown bg-clip-text text-transparent">
-                        Khaled
+                        Mostafa
                       </h2>
                       <p className="text-sm text-coffee-medium font-medium">Coffee Master</p>
                     </div>

@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Khaled Sameh - Professional Coffee Expert',
+  title: 'Mostafa Mohammed - Professional Coffee Expert',
   description: 'Showcasing the skills, courses, and achievements of a professional barista',
   manifest: '/site.webmanifest',
   icons: {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Khaled Sameh',
+    title: 'Mostafa Mohammed',
   },
 }
 

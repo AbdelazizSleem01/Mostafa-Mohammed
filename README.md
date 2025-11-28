@@ -1,4 +1,4 @@
-# Khaled Sameh - Professional Barista Portfolio
+# MostafaMohammed - Professional Barista Portfolio
 
 A dynamic, full-stack portfolio application designed to showcase the expertise, career journey, and achievements of a professional barista. Built with modern web technologies, this application features a responsive public interface and a comprehensive admin dashboard for content management.
 

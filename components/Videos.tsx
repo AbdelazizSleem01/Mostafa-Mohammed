@@ -161,7 +161,7 @@ export default function Videos() {
                             <FaEye className="text-coffee-brown" />
                             <span className="text-sm font-medium  whitespace-nowrap">Watch Now</span>
                           </div>
-                         
+
                         </div>
 
                         <motion.button
@@ -206,7 +206,7 @@ export default function Videos() {
               Subscribe to our channel for exclusive tutorials, pro tips, and behind-the-scenes content.
             </p>
             <motion.a
-              href="https://www.youtube.com/@khaledsameh1939"
+              href="https://www.youtube.com/@mostafadesha-h6n"
               target="_blank"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

@@ -321,9 +321,9 @@ export async function sendReplyEmail({ to, name, originalMessage, reply }: Email
         <!-- Header Section -->
         <div class="header">
           <div class="logo-container">
-            <img src="https://image2url.com/images/1764283142040-b4e424ed-3c8f-4dcc-affe-a606e90c1c51.png" alt="Khaled Sameh Logo" class="logo">
+            <img src="https://image2url.com/images/1764354570297-61ecfb80-90a6-4c18-b4a7-002823856192.png" alt="MostafaMohammed Logo" class="logo">
           </div>
-          <div class="brand-name">Khaled Sameh</div>
+          <div class="brand-name">MostafaMohammed</div>
           <h1>Reply to Your Message</h1>
           <p>Thank you for getting in touch!</p>
         </div>
@@ -356,7 +356,7 @@ export async function sendReplyEmail({ to, name, originalMessage, reply }: Email
           <!-- Signature -->
           <div class="signature">
             <div class="signature-main">Warm regards,</div>
-            <div class="signature-title">Khaled Sameh</div>
+            <div class="signature-title">MostafaMohammed</div>
             <div>Professional Barista & Coffee Consultant</div>
             <div class="signature-tagline">☕ Creating exceptional coffee experiences</div>
           </div>
@@ -365,7 +365,7 @@ export async function sendReplyEmail({ to, name, originalMessage, reply }: Email
         <!-- Footer -->
         <div class="footer">
           <div class="footer-content">
-            <div class="footer-logo">Khaled Sameh</div>
+            <div class="footer-logo">MostafaMohammed</div>
             <div class="footer-text">
               Dedicated to the art and science of exceptional coffee brewing and education.
             </div>
@@ -373,13 +373,13 @@ export async function sendReplyEmail({ to, name, originalMessage, reply }: Email
             <a href="${websiteUrl}" class="website-link">🌐 Visit My Website</a>
             
             <div class="social-links">
-              <a href="https://www.instagram.com/khaledsameh37" class="social-link instagram" style="text-decoration: none;">
+              <a href="https://www.instagram.com/mostafamohmed36/" class="social-link instagram" style="text-decoration: none;">
                 📷
               </a>
-              <a href="https://www.linkedin.com/in/khaled-sameh-16a3bb257" class="social-link linkedin" style="text-decoration: none;">
+              <a href="https://www.linkedin.com/in/mostafa-desha-920956392/" class="social-link linkedin" style="text-decoration: none;">
                 💼
               </a>
-              <a href="https://www.youtube.com/@khaledsameh1939" class="social-link youtube" style="text-decoration: none;">
+              <a href="https://www.youtube.com/@mostafadesha-h6n" class="social-link youtube" style="text-decoration: none;">
                 ▶️
               </a>
               <a href="${websiteUrl}" class="social-link website" style="text-decoration: none;">
@@ -391,7 +391,7 @@ export async function sendReplyEmail({ to, name, originalMessage, reply }: Email
               <p>This email was sent in response to your contact form submission.</p>
               <p>If you have any further questions, please reply directly to this email.</p>
               <p style="margin-top: 15px; color: #718096;">
-                © 2025 Khaled Sameh. All rights reserved.
+                © 2025 MostafaMohammed. All rights reserved.
               </p>
             </div>
           </div>
@@ -402,7 +402,7 @@ export async function sendReplyEmail({ to, name, originalMessage, reply }: Email
   `
 
   const textContent = `
-REPLY TO YOUR MESSAGE - KHALED SAMEH
+REPLY TO YOUR MESSAGE - MostafaMohammed
 =====================================
 
 Hi ${name},
@@ -416,7 +416,7 @@ YOUR ORIGINAL MESSAGE:
 ${originalMessage}
 
 Warm regards,
-Khaled Sameh
+MostafaMohammed
 Professional Barista & Coffee Consultant
 ☕ Creating exceptional coffee experiences
 
@@ -424,22 +424,22 @@ Professional Barista & Coffee Consultant
 Visit my website: ${websiteUrl}
 
 Connect with me:
-Instagram: https://www.instagram.com/khaledsameh37
-LinkedIn: https://www.linkedin.com/in/khaled-sameh-16a3bb257
-YouTube: https://www.youtube.com/@khaledsameh1939
+Instagram: https://www.instagram.com/mostafamohmed36/
+LinkedIn: https://www.linkedin.com/in/mostafa-desha-920956392/
+YouTube: https://www.youtube.com/@mostafadesha-h6n
 
 Dedicated to the art and science of exceptional coffee brewing and education.
 
 This email was sent in response to your contact form submission.
 If you have any further questions, please reply directly to this email.
 
-© 2025 Khaled Sameh. All rights reserved.
+© 2025 MostafaMohammed. All rights reserved.
   `
 
   const mailOptions = {
-    from: `"${process.env.SMTP_FROM_NAME || 'Khaled Sameh'}" <${process.env.EMAIL_USER}>`,
+    from: `"${process.env.SMTP_FROM_NAME || 'MostafaMohammed'}" <${process.env.EMAIL_USER}>`,
     to,
-    subject: 'Re: Your Message - Khaled Sameh Portfolio',
+    subject: 'Re: Your Message - MostafaMohammed Portfolio',
     text: textContent,
     html: htmlContent,
   }

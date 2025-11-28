@@ -9,7 +9,7 @@ export default function Hero() {
     const cvUrl = '/cv/cv.pdf'
     const link = document.createElement('a')
     link.href = cvUrl
-    link.download = 'Khaled_CoffeeMaster_CV.pdf'
+    link.download = 'Mostafa_CoffeeMaster_CV.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -18,19 +18,19 @@ export default function Hero() {
   const socialLinks = [
     {
       icon: FaInstagram,
-      href: "https://www.instagram.com/khaledsameh37",
+      href: "https://www.instagram.com/mostafamohmed36/",
       color: "hover:text-pink-600",
       bgColor: "hover:bg-pink-100"
     },
     {
       icon: FaLinkedin,
-      href: "https://www.linkedin.com/in/khaled-sameh-16a3bb257",
+      href: "https://www.linkedin.com/in/mostafa-desha-920956392/",
       color: "hover:text-blue-600",
       bgColor: "hover:bg-blue-100"
     },
     {
       icon: FaYoutube,
-      href: "https://www.youtube.com/@khaledsameh1939",
+      href: "https://www.youtube.com/@mostafadesha-h6n",
       color: "hover:text-red-600",
       bgColor: "hover:bg-red-100"
     }
@@ -62,8 +62,8 @@ export default function Hero() {
           <div className="relative">
             <div className="w-80 h-80 lg:w-96 lg:h-96 relative rounded-full overflow-hidden border-8 border-coffee-brown shadow-2xl">
               <Image
-                src="/barista-profile.webp"
-                alt="Professional Barista - Khaled Coffee Master"
+                src="/barista.webp"
+                alt="Professional Barista - MostafaCoffee Master"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
                 priority
@@ -109,12 +109,12 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-4xl lg:text-6xl xl:text-7xl font-bold text-coffee-dark mb-4 leading-tight"
           >
-            Khaled{" "}
+            Mostafa{" "}
             <motion.span
               className="text-coffee-brown bg-linear-to-r from-coffee-brown to-amber-700 bg-clip-text "
               whileHover={{ scale: 1.05 }}
             >
-              Sameh{" "}
+              Mohammed{" "}
             </motion.span>
 
           </motion.h1>
@@ -168,7 +168,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="btn btn-lg bg-coffee-brown text-white shadow-lg flex items-center gap-2"
-              href='/https://www.instagram.com/khaledsameh37'
+              href='https://www.instagram.com/mostafamohmed36/'
               target="_blank"
             >
               <FaInstagram />
