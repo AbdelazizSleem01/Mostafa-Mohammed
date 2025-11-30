@@ -1,0 +1,8 @@
+{
+    "codingcopilot.commitMessageLanguage": "en",
+    "codingcopilot.enableCompletionLanguage": {
+        "scminput": true,
+        "": true
+    },
+    "codingcopilot.modelDocumentLanguage": "English"
+}
