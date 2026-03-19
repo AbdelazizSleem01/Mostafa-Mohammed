@@ -1,3 +1,6 @@
+
+<img width="1118" height="420" alt="mockup-all-framed" src="https://github.com/user-attachments/assets/75a9ef70-dd23-4398-9499-f71a9d3e10dc" />
+
 # MostafaMohammed - Professional Barista Portfolio
 
 A dynamic, full-stack portfolio application designed to showcase the expertise, career journey, and achievements of a professional barista. Built with modern web technologies, this application features a responsive public interface and a comprehensive admin dashboard for content management.
